@@ -15,10 +15,11 @@
         {{ information.Title }}
       </ion-card-title>
       <ion-card-subtitle>
-        {{ information.Year }}
+        {{ information.Year }} {{ information.Rated }}
       </ion-card-subtitle>
     </ion-card-header>
-    <ion-card-content>
+
+    <ion-card-content text-center>
 
       <img [src]="information.Poster" class='info-img'>
       {{ information.Plot }}
@@ -38,10 +39,11 @@
         <ion-label text-wrap>{{ information.Actors }}</ion-label>
       </ion-item>
 
-      <ion-button expand="full" (click)="openWebsite()"
-      *ngIf="information.Website && information.Website != 'N/A'">
-        Open Website
+      <ion-button
+       expand="full" (click)="openWebsite()" *ngIf="information.Website && information.Website != 'N/A'"
+       >Open Website
       </ion-button>
+
     </ion-card-content>
   </ion-card>
 
